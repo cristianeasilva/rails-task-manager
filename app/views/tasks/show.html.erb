@@ -1,0 +1,17 @@
+<h1>Task Information</h1>
+<p>Title: <%= @task.title %></p>
+<p>Details: <%= @task.details %></p>
+<p>Completed: <%= @task.completed %></p>
+
+<div class="completed">
+  <% if @task.completed %>
+    <i class="fa fa-check-square-o padded"><%= ' this task is completed' %></i>
+  <% else %>
+    <i class="fa fa-square-o padded"><%= ' this task is NOT completed' %></i>
+  <% end %>
+</div>
+
+<p><%= link_to 'Back to all tasks', tasks_path %></p>
+
+<%= link_to 'Remove this task', task_path, method: :delete %>
+
